@@ -3,6 +3,7 @@
   --preto: #161616;
   --footer: #f9f9f9;
 }
+
 a {
   text-decoration: none;
 }
@@ -117,14 +118,6 @@ footer p {
   .newsletter-input,
   .sign-up {
     width: 100%;
-
     border-radius: 5px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .social-logos,
-  .payment-logos {
-    width: 100%;
   }
 }
