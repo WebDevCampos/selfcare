@@ -121,3 +121,16 @@ footer p {
     border-radius: 5px;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .insta-logo,
+  .face-logo,
+  .paypal-logo {
+    width: 20px;
+  }
+
+  .master-logo,
+  .visa-logo {
+    width: 30px;
+  }
+}
