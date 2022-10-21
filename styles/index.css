@@ -1,0 +1,130 @@
+:root {
+  --verde: #5ca720;
+  --preto: #161616;
+  --footer: #f9f9f9;
+}
+a {
+  text-decoration: none;
+}
+html,
+body,
+p,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+p {
+  color: #161616;
+}
+footer {
+  background: var(--footer);
+}
+footer p {
+  font-size: 20px;
+}
+.user-area {
+  width: 20%;
+}
+.user-search,
+.user-profile,
+.user-chart {
+  width: 20px;
+}
+
+.insta-logo,
+.face-logo,
+.paypal-logo {
+  width: 30px;
+}
+
+.master-logo,
+.visa-logo {
+  width: 40px;
+}
+.banner {
+  width: 100%;
+}
+
+.product-card {
+  width: 303px;
+  height: 400px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.product-card img {
+  width: 303px;
+  height: 303px;
+}
+.product-price {
+  color: var(--verde);
+}
+.newsletter-input {
+  margin: -3px;
+  height: 54px;
+  outline: 0;
+  border: 1px solid rgb(206, 204, 204);
+  border-radius: 5px 0 0 5px;
+}
+.sign-up {
+  background-color: var(--verde);
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  height: 54px;
+}
+.social-logos {
+  width: 150px;
+}
+.payment-logos {
+  width: 200px;
+}
+.fw300 {
+  font-weight: 300;
+}
+.fw400 {
+  font-weight: 400;
+}
+.fw500 {
+  font-weight: 500;
+}
+.fw700 {
+  font-weight: 700;
+}
+.fw900 {
+  font-weight: 900;
+}
+
+@media screen and (max-width: 945px) {
+  .user-area {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .newsletter-input {
+    margin: 0;
+  }
+  .newsletter-input,
+  .sign-up {
+    width: 100%;
+
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .social-logos,
+  .payment-logos {
+    width: 100%;
+  }
+}

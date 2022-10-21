@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Care</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/starlogo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="d-flex justify-content-between align-items-center p-4">
+        <a href="#"><img src="./assets/icons/logo.svg" class="ms-3" /></a>
+
+        <div class="d-flex justify-content-around user-area">
+          <a href="#">
+            <img src="./assets/icons/lupa.svg" class="user-search" />
+          </a>
+          <a href="#">
+            <img src="./assets/icons/user.svg" class="user-profile" />
+          </a>
+          <a href="#">
+            <img src="./assets/icons/chart.svg" class="user-chart" />
+          </a>
+        </div>
+      </nav>
+      <section>
+        <img src="./assets/banner.png" class="banner" alt="company banner" />
+      </section>
+    </header>
+
+    <section class="d-flex justify-content-between py-4 mb-5">
+      <p class="ms-5 fw700">PROMOÇÃO</p>
+      <p class="me-5 fw400">9 produtos</p>
+    </section>
+
+    <main
+      class="products container w-75 d-flex flex-wrap justify-content-evenly"
+    ></main>
+    <footer class="container-fluid">
+      <div class="container">
+        <section class="row">
+          <div class="col-md-6 my-5 me-auto">
+            <a class="fw700" href="#"><p>Contato</p></a>
+            <a class="fw700" href="#"><p>Termos de Serviço</p></a>
+            <a class="fw700" href="#"><p>Política de privacidade</p></a>
+            <a class="fw700" href="#"><p>Cancelamento, troca e reembolso</p></a>
+          </div>
+
+          <div class="col-md-6 col-xl-4 my-5 ms-auto">
+            <p class="fw700" style="margin-left: -10px">Newsletter</p>
+            <div class="row">
+              <input
+                class="newsletter-input my-2 col-8"
+                placeholder="Digite seu melhor e-mail"
+              />
+              <button class="sign-up my-2 col-4 fw900">Inscrever</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="container-fluid p-2 border-top py-5">
+          <div class="row">
+            <div class="col-6">
+              <div class="social-logos d-flex justify-content-around">
+                <img
+                  src="./assets/icons/instagram.svg"
+                  class="insta-logo"
+                  alt="instagram logo"
+                />
+                <img
+                  src="./assets/icons/facebook.svg"
+                  class="face-logo"
+                  alt="facebook logo"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="payment-logos d-flex justify-content-around ms-auto">
+                <img
+                  src="./assets/icons/mastercard.svg"
+                  class="master-logo"
+                  alt="mastercard logo"
+                />
+                <img
+                  src="./assets/icons/paypal.svg"
+                  class="paypal-logo"
+                  alt="paypal logo"
+                />
+                <img
+                  src="./assets/icons/visa.svg"
+                  class="visa-logo"
+                  alt="visa logo"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const imgSrcArr = [
+        "chandra-oh-y5hRv6UNKMg-unsplash.jpg",
+        "devin-avery-bMH8ub9z1_U-unsplash.jpg",
+        "devin-avery-BRVqq2uak4E-unsplash.jpg",
+        "gabrielle-henderson-1DMNn6gBbwQ-unsplash.jpg",
+        "nery-montenegro-SmEty_TVr80-unsplash.jpg",
+        "olena-sergienko-GOVTETevRm8-unsplash.jpg",
+        "phaedra-botanicals-uFAHrKYkTVI-unsplash.jpg",
+        "pharma-hemp-complex-tAzdKblAinw-unsplash.jpg",
+        "pharma-hemp-complex-yVAXSK6zFIM-unsplash.jpg",
+      ];
+      const main = document.querySelector("main");
+
+      function createCards(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          const productCard = document.createElement("section");
+          productCard.classList.add("product-card", "my-3");
+          productCard.innerHTML = `<a href="#"><img src='./assets/${arr[i]}'/></a>
+          <a href="#"><p class='fw500'>Lorem ipsum dolor sit</p></a>
+          <p class='fw700'>R$ <span class='product-price'>50,00</span>
+          </p>`;
+          main.append(productCard);
+        }
+      }
+      createCards(imgSrcArr);
+    </script>
+  </body>
+</html>
