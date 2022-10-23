@@ -32,12 +32,28 @@ footer p {
   font-size: 20px;
 }
 .user-area {
-  width: 20%;
+  width: 300px;
 }
-.user-search,
-.user-profile,
-.user-chart {
+
+.user-search-icon,
+.user-profile-icon,
+.user-chart-icon {
   width: 20px;
+}
+.user-search:hover {
+  cursor: pointer;
+}
+.product-search-input {
+  width: 0;
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  border-color: transparent;
+  transition: width 0.5s ease-in-out;
+}
+.user-search:hover > .product-search-input {
+  width: 150px;
+  border: 1px solid #ccc;
 }
 
 .insta-logo,
@@ -89,6 +105,22 @@ footer p {
 .payment-logos {
   width: 200px;
 }
+
+.flex-around-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-btw-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-even-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
 .fw300 {
   font-weight: 300;
 }
@@ -107,11 +139,14 @@ footer p {
 
 @media screen and (max-width: 945px) {
   .user-area {
-    width: 200px;
+    width: 35%;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .user-area {
+    width: 45%;
+  }
   .newsletter-input {
     margin: 0;
   }
@@ -123,6 +158,12 @@ footer p {
 }
 
 @media screen and (max-width: 576px) {
+  nav {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
   .insta-logo,
   .face-logo,
   .paypal-logo {
@@ -132,5 +173,8 @@ footer p {
   .master-logo,
   .visa-logo {
     width: 30px;
+  }
+  .user-area {
+    width: 100%;
   }
 }

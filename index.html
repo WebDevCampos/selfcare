@@ -22,18 +22,24 @@
   </head>
   <body>
     <header>
-      <nav class="d-flex justify-content-between align-items-center p-4">
+      <nav class="flex-btw-center p-4">
         <a href="#"><img src="./assets/icons/logo.svg" class="ms-3" /></a>
 
-        <div class="d-flex justify-content-around user-area">
+        <div class="flex-around-center user-area">
+          <div class="user-search">
+            <input
+              type="text"
+              name="product-search-input"
+              class="product-search-input"
+            />
+            <img src="./assets/icons/lupa.svg" class="user-search-icon" />
+          </div>
+
           <a href="#">
-            <img src="./assets/icons/lupa.svg" class="user-search" />
+            <img src="./assets/icons/user.svg" class="user-profile-icon" />
           </a>
           <a href="#">
-            <img src="./assets/icons/user.svg" class="user-profile" />
-          </a>
-          <a href="#">
-            <img src="./assets/icons/chart.svg" class="user-chart" />
+            <img src="./assets/icons/chart.svg" class="user-chart-icon" />
           </a>
         </div>
       </nav>
@@ -42,14 +48,12 @@
       </section>
     </header>
 
-    <section class="d-flex justify-content-between py-4 mb-5 border">
+    <section class="flex-btw-center py-4 mb-5 border">
       <p class="ms-5 fw700">PROMOÇÃO</p>
       <p class="me-5 fw400">9 produtos</p>
     </section>
 
-    <main
-      class="products container w-75 d-flex flex-wrap justify-content-evenly"
-    ></main>
+    <main class="products container w-75 flex-even-wrap"></main>
     <footer class="container-fluid">
       <div class="container">
         <section class="row">
@@ -73,7 +77,7 @@
         </section>
       </div>
       <section class="border-top py-5">
-        <div class="container d-flex justify-content-between">
+        <div class="container flex-btw-center">
           <div>
             <a href="#">
               <img
@@ -117,32 +121,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      const imgSrcArr = [
-        "chandra-oh-y5hRv6UNKMg-unsplash.jpg",
-        "devin-avery-bMH8ub9z1_U-unsplash.jpg",
-        "devin-avery-BRVqq2uak4E-unsplash.jpg",
-        "gabrielle-henderson-1DMNn6gBbwQ-unsplash.jpg",
-        "nery-montenegro-SmEty_TVr80-unsplash.jpg",
-        "olena-sergienko-GOVTETevRm8-unsplash.jpg",
-        "phaedra-botanicals-uFAHrKYkTVI-unsplash.jpg",
-        "pharma-hemp-complex-tAzdKblAinw-unsplash.jpg",
-        "pharma-hemp-complex-yVAXSK6zFIM-unsplash.jpg",
-      ];
-      const main = document.querySelector("main");
-
-      function createCards(arr) {
-        for (let i = 0; i < arr.length; i++) {
-          const productCard = document.createElement("section");
-          productCard.classList.add("product-card", "my-3");
-          productCard.innerHTML = `<a href="#"><img src='./assets/${arr[i]}'/></a>
-          <a href="#"><p class='fw500'>Lorem ipsum dolor sit</p></a>
-          <p class='fw700'>R$ <span class='product-price'>50,00</span>
-          </p>`;
-          main.append(productCard);
-        }
-      }
-      createCards(imgSrcArr);
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
